@@ -8,6 +8,7 @@ export interface TelegrafModuleOptions {
   launchOptions?: Telegraf.LaunchOptions | false;
   include?: Function[];
   middlewares?: ReadonlyArray<Middleware<any>>;
+  botLaunchDelay?: number;
 }
 
 export interface TelegrafOptionsFactory {
