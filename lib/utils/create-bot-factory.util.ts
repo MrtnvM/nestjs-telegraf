@@ -10,7 +10,7 @@ export async function createBotFactory(
 
   if (options.launchOptions !== false) {
     if (options.botLaunchDelay) { 
-      setTimeout(() => bot.launch(options.launchOptions), options.botLaunchDelay);
+      setTimeout(() => bot.launch(options.launchOptions as any), options.botLaunchDelay);
     } else {
       bot.launch(options.launchOptions)
     }
