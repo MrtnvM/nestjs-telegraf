@@ -9,10 +9,13 @@ export async function createBotFactory(
   bot.use(...(options.middlewares ?? []));
 
   if (options.launchOptions !== false) {
-    if (options.botLaunchDelay) { 
-      setTimeout(() => bot.launch(options.launchOptions as any), options.botLaunchDelay);
+    if (options.botLaunchDelay) {
+      setTimeout(
+        () => bot.launch(options.launchOptions as any),
+        options.botLaunchDelay,
+      );
     } else {
-      bot.launch(options.launchOptions)
+      bot.launch(options.launchOptions);
     }
   }
 
